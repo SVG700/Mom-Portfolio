@@ -147,7 +147,7 @@ const fadeUp = {
 
 export function PortfolioPage() {
   const formspreeEndpoint =
-    process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT ?? "https://formspree.io/f/maqpbpan";
+    process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT?.trim() || "https://formspree.io/f/maqpbpan";
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -201,11 +201,6 @@ export function PortfolioPage() {
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!validateForm()) {
-      return;
-    }
-
-    if (!formspreeEndpoint) {
-      setSubmitError("Form is not configured yet. Please set NEXT_PUBLIC_FORMSPREE_ENDPOINT.");
       return;
     }
 

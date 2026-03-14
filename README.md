@@ -39,7 +39,7 @@ A premium, responsive portfolio website for CA Kavya Patnam built with Next.js 1
 1. Create a form in Formspree and copy your endpoint.
 2. Create a local env file from [ .env.example ] and set:
 
-   NEXT_PUBLIC_FORMSPREE_ENDPOINT=https://formspree.io/f/your_form_id
+   NEXT_PUBLIC_FORMSPREE_ENDPOINT=https://formspree.io/f/maqpbpan
 
 3. Restart the dev server after updating env values.
 
